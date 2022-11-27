@@ -39,13 +39,14 @@ function TodoForm(props) {
         </>
       ) : (
         <>
-         const submitUpdate = value =
-    updateTodo(edit.id, value);
-    setEdit(
-      id: null,
-      value: ''
-    
-    );
+          <input
+            placeholder='Add a todo'
+            value={input}
+            onChange={handleChange}
+            name='text'
+            className='todo-input'
+            ref={inputRef}
+          />
           <button onClick={handleSubmit} className='todo-button'>
             Add todo
           </button>
