@@ -9,15 +9,11 @@ function TodoForm(props) {
     inputRef.current.focus();
   });
 
-  const handleChange = e => {
-    setInput(e.target.value);
-  };
+  
 //use prev default for no default action
   const handleSubmit = e => {
     e.preventDefault();
-    props.onSubmit({
-      id: Math.floor(Math.random() * 10000),
-      text: input
+    props.onSubmittext: input
     });
     setInput('');
   };
@@ -28,7 +24,7 @@ function TodoForm(props) {
           <input
             placeholder='Update your item'
             value={input}
-            onChange={handleChange}
+            onChange={}
             name='text'
             ref={inputRef}
             className='todo-input edit'
@@ -45,9 +41,7 @@ function TodoForm(props) {
       id: null,
       value: ''
     });
-          <button onClick={handleSubmit} className='todo-button'>
-            Add todo
-          </button>
+         
         </>
       )}
     </form>
